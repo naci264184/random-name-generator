@@ -5,7 +5,7 @@ using namespace std;
 #include <ctime>
 #include <Windows.h>
 
-//测试注释，测试分支
+//测试注释
 
 void cl_wb1();						//处理文本1（获取汉字库）
 void cl_wb2();						//处理文本2（删除由于转成ANSI格式后，错误显示的汉字）
