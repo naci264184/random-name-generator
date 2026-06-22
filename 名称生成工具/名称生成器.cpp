@@ -5,8 +5,6 @@ using namespace std;
 #include <ctime>
 #include <Windows.h>
 
-//测试注释，内容1和内容2的合并结果
-
 void cl_wb1();						//处理文本1（获取汉字库）
 void cl_wb2();						//处理文本2（删除由于转成ANSI格式后，错误显示的汉字）
 void cl_wb3();						//处理文本3（提取前面3500字）
