@@ -22,7 +22,7 @@ void qc_wjnr();							//清除"输出结果文件"原内容
 //生成过程_方法
 void sc();							//生成（包括排除汉字、生成名称、排除汉字组合）
 void pc_hz();						//排除汉字（去掉不合适汉字）
-int jc_hzsz(string& path);			//检测_汉字数量
+void jc_hzsz(string& path);			//检测_汉字数量
 void sc_sjmc();						//生成_随机名称
 bool pc_hzzh();						//排除汉字组合
 void xr_wj(int& i);					//将生成结果，写入文件中
@@ -44,7 +44,7 @@ string generated_names = "temp\\data\\generated_names.txt";		//生成结果
 bool sf_ckscgc = 1;					//是否在终端中查看生成过程
 bool sf_scpcgc = 0;					//是否输出汉字排除过程
 bool sf_scczpc = 1;					//是否输出词组排除过程
-bool sf_cscspc = 0;					//是否_测试词组排除过程（将名称_生成结果的值，故意修改为一个非常词组）
+bool sf_cscspc = 0;					//是否_测试词组排除过程（将名称_生成结果的值，故意修改为一个非法词组）
 int sj_fw = 3500;					//随机的汉字数范围，这里建议2499或3499（汉字库中3500后面的字不常用，还有随机算法不优秀，取3500这样的整数会不够随机）
 string mc_scjg = "";				//名称_生成结果
 int mc_zs = 0;						//名称_字数
@@ -236,8 +236,6 @@ void jm()
 	system("pause");
 }
 int cl_yhsr()
-
-
 {
 	string sr = "";
 
@@ -490,7 +488,7 @@ void pc_hz()					//排除_不合适汉字
 	ifs.close();
 	ofs.close();
 }
-int jc_hzsz(string& path)
+void jc_hzsz(string& path)
 {
 	//1.创建变量
 	ifstream ifs;
