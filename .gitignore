@@ -8,7 +8,8 @@ x86/
 # 忽略所有 temp 临时文件夹
 temp/
 misc/
-assets/raw
+random-name-generator/assets/raw/
+
 
 # 忽略本地用户配置文件
 *.user
